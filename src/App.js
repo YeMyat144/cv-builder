@@ -3,6 +3,7 @@ import styles from './styles/CV.module.css'
 import React, { useState } from "react";
 import PersonalSection from './components/personalSection';
 import EducationExperience from './components/educationExperience';
+import SkillExperience from './components/skillExperience';
 import WorkExperience from './components/workExperience';
 
 function App() {
@@ -50,6 +51,33 @@ function App() {
     const index = e.target.closest('button').dataset.key
     setEducationExperience(prev => prev.filter((_, i) => i != index));
   }
+
+  const [skillExperience, setSkillExperience] = useState([
+    {
+      tech: 'JavaScript',
+      soft: 'Problem-solving'
+    },])
+  
+  function updateSkillExperience(e) {
+    const index = e.target.closest('form').dataset.key
+    const {name, value} = e.target
+
+    setSkillExperience(prev =>
+      prev.map((skill, sIndex) =>
+        sIndex == index ? {...skill, [name]: value} : skill
+      )
+    )
+  }
+
+  function addSkillExperience(data) {
+    setSkillExperience(prev => [...prev, data])
+  }
+  function deleteSkillExperience(e) {
+    const index = e.target.closest('button').dataset.key
+    setSkillExperience(prev => prev.filter((_, i) => i != index));
+  }
+
+
   const [workExperience, setWorkExperience] = useState([
     {
       position: 'Software Engineer',
@@ -99,6 +127,12 @@ function App() {
         handleOnChange={updateEducationExperience}
         handleOnClick={addEducationExperience}
         handleDelete={deleteEducationExperience}
+      />
+      <SkillExperience
+        experience={skillExperience}
+        handleOnChange={updateSkillExperience}
+        handleOnClick={addSkillExperience}
+        handleDelete={deleteSkillExperience}
       />
       <WorkExperience
         experience={workExperience}
