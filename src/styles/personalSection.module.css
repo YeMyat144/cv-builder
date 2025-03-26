@@ -1,0 +1,32 @@
+.personalSection {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .personalSection p {
+    margin: 5px;
+  }
+  
+  .personalSection h2 {
+    font-size: 1.1rem;
+    margin: 5px;
+  }
+  
+  .personalSectionContainer {
+    text-align: center;
+  }
+  
+  .mainContainer {
+    border-bottom: 2px solid gray;
+  }
+  
+  .formContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .formInput {
+    display: flex;
+    flex-direction: column;
+  }

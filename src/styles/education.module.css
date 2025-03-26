@@ -1,0 +1,86 @@
+.educationBlock {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+  }
+  
+  .educationBlockContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .educationDegree {
+    font-size: 1.25rem;
+    margin: 5px;
+  }
+  
+  .educationUniversity {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 5px;
+  }
+  
+  .educationDateSection {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .educationSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .formInput {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .educationForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .formButtons {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .formButton {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .educationTitle {
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+  }
+  
+  @media only screen and (max-width: 700px) {
+   .educationBlockContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   } 
+  
+  
+   .educationDegree {
+    font-size: 1.05rem;
+    font-weight: 600;
+   }
+  
+   .educationUniversity {
+    font-size: 1rem;
+    font-weight: 600;
+   }
+  
+   .educationDateSection {
+    font-weight: 500;
+   }
+  }

@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+:root {
+  /* Light theme */
+  --light-bg: #f4f7f1;
+  --light-bg-box: #e0e6d5;
+  --light-text: #141414;
+  --light-accent: #833f8b;
+  --light-accent-hover: #8449a1;
+
+  /* Dark theme */
+  --dark-bg: #1a1b19;
+  --dark-bg-box: #2d312a;
+  --dark-text: #eeeeee;
+  --dark-accent: #4f2e56;
+  --dark-accent-hover: #6c3f73;
+}
+body {
+  /* Default to dark theme */
+  --bg: var(--dark-bg);
+  --bg-box: var(--dark-bg-box);
+  --text: var(--dark-text);
+  --accent: var(--dark-accent);
+  --accent-hover: var(--dark-accent-hover);
+
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Ubuntu, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body.light {
+  /* Override with light theme */
+  --bg: var(--light-bg);
+  --bg-box: var(--light-bg-box);
+  --text: var(--light-text);
+  --accent: var(--light-accent);
+  --accent-hover: var(--light-accent-hover);
+}
+
+#root {
+  display: grid;
+  place-items: center;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+button {
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 7px;
+  color: var(--text);
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+@media (prefers-color-scheme: light) {
+  body:not(.dark) {
+    /* Automatically apply light theme if user prefers light mode */
+    --bg: var(--light-bg);
+    --bg-box: var(--light-bg-box);
+    --text: var(--light-text);
+    --accent: var(--light-accent);
+    --accent-hover: var(--light-accent-hover);
+  }
+}

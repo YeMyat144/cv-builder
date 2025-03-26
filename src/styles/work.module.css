@@ -1,0 +1,94 @@
+.workSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .workBlock {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .workBlockContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .workPosition {
+    font-size: 1.25rem;
+    margin: 5px;
+  }
+  
+  .workCompany {
+    font-size: 1.1rem;
+    margin: 5px;
+  }
+  
+  .workDateSection {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .workResponsability {
+    margin: 5px;
+  }
+  
+  .formContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .formInput {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formInputTextArea {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 2;
+  }
+  
+  .formButtons {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .workForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .workTitle {
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .workBlock {
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     gap: 0;
+    } 
+   
+    .educationDegree {
+     font-size: 1.05rem;
+     font-weight: 600;
+    }
+   
+    .educationUniversity {
+     font-size: 1rem;
+     font-weight: 600;
+    }
+   
+    .workDateSection {
+      font-weight: 500;
+     }
+   }
