@@ -58,8 +58,8 @@ function App() {
     {
       degree: 'Bachelor of Computer Science',
       university: 'Assumption University in Thailand',
-      startDate: '2022-05-06',
-      endDate: '2025-06-22'
+      startDate: '2014-05-06',
+      endDate: '2018-06-22'
     },
   ]);
 
