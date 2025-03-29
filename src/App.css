@@ -12,18 +12,18 @@ li {
 
 :root {
   /* Light theme */
-  --light-bg: #f4f7f1;
-  --light-bg-box: #e0e6d5;
+  --light-bg: #ffffff;
+  --light-bg-box: #000000;
   --light-text: #141414;
-  --light-accent: #833f8b;
-  --light-accent-hover: #8449a1;
+  --light-accent: #0fc49d;
+  --light-accent-hover: #0ba785;
 
   /* Dark theme */
-  --dark-bg: #1a1b19;
-  --dark-bg-box: #2d312a;
-  --dark-text: #eeeeee;
-  --dark-accent: #4f2e56;
-  --dark-accent-hover: #6c3f73;
+  --dark-bg: #1c1b1b;
+  --dark-bg-box: #000000;
+  --dark-text: #ffffff;
+  --dark-accent: #0fc49d;
+  --dark-accent-hover: #0ba785;
 }
 body {
   /* Default to dark theme */
@@ -79,4 +79,32 @@ button:hover {
     --accent: var(--light-accent);
     --accent-hover: var(--light-accent-hover);
   }
+}
+.toggleButton {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--accent);
+  color: var(--text);
+  font-size: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.toggleButton:hover {
+  background-color: var(--accent-hover);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+  transform: scale(1.1);
+}
+
+.toggleButton i {
+  font-size: 18px;
 }

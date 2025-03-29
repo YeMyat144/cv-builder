@@ -7,6 +7,12 @@ import SkillExperience from './components/skillExperience';
 import WorkExperience from './components/workExperience';
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false)
+ 
+  function toggleTheme() {
+    setIsDarkMode(prevMode => !prevMode);
+    document.body.classList.toggle("light", !isDarkMode);
+  }
 
   const [personalInformation, setPersonalInformation] = useState(
     {
@@ -118,6 +124,9 @@ function App() {
 
   return (
     <div className={styles.cv}>
+       <button onClick={toggleTheme} className="toggleButton">
+        {isDarkMode ? "🌙" : "☀️"}
+      </button>
       <PersonalSection
         personalData={personalInformation}
         handleOnChange={updatePersonalInformation}
