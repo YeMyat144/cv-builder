@@ -146,12 +146,10 @@ function App() {
 
   return (
     <div className={styles.cv} id="resume-content">
-      {/* Dark/Light Mode Button */}
       <button onClick={toggleTheme} className="toggleButton no-print">
         {isDarkMode ? "🌙" : "☀️"}
       </button>
 
-        {/* Download Resume Button */}
       <button onClick={downloadResume} className="downloadButton no-print">
         🖨️
       </button>
