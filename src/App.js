@@ -151,6 +151,11 @@ function App() {
         {isDarkMode ? "🌙" : "☀️"}
       </button>
 
+        {/* Download Resume Button */}
+      <button onClick={downloadResume} className="downloadButton no-print">
+        🖨️
+      </button>
+
       <PersonalSection
         personalData={personalInformation}
         handleOnChange={updatePersonalInformation}
@@ -174,10 +179,6 @@ function App() {
         handleDelete={deleteWorkExperience}
       />
 
-      {/* Download Resume Button */}
-      <button onClick={downloadResume} className="downloadButton no-print">
-        Download
-      </button>
     </div>
   );
 }
